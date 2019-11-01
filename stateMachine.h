@@ -19,10 +19,10 @@ public:
     std::string readFSM(const char *filename);
     bool parseFSM(std::string str, T initialState, std::set<T> finalStates, std::string FSM);
 private:
-	T m_initial;
-	std::set<T> m_states;
-	std::set<T> m_final_states;
-	std::map<T, std::pair<A,T>> m_transitions;
+    T m_initial;
+    std::set<T> m_states;
+    std::set<T> m_final_states;
+    std::map<T, std::pair<A,T>> m_transitions;
     std::set<A> m_alphabet;
 };
 

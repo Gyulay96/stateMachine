@@ -8,8 +8,8 @@
 template<class T, class A>
 FSM<T,A>::FSM(T initialState, bool isfinalState)
 {
-	this->m_initial = initialState;
-	add_state(initialState, isfinalState);
+    this->m_initial = initialState;
+    add_state(initialState, isfinalState);
 }
 
 template<class T, class A>
@@ -20,10 +20,10 @@ FSM<T,A>::~FSM()
 template<class T, class A>
 void FSM<T,A>::add_state(T state, bool isfinalState)
 {
-	m_states.insert(state);
-	if(isfinalState) {
-	    m_final_states.insert(state);
-	}
+    m_states.insert(state);
+    if(isfinalState) {
+        m_final_states.insert(state);
+    }
 }
 
 template<class T, class A>
