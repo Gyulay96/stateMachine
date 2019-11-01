@@ -10,10 +10,10 @@ class FSM
 {
 public:
     explicit FSM(T initialState, bool isFinalState);
-	FSM(std::set<T> states, std::set<A> alphabet, std::map<std::pair<T,A>, T> transitions, T initialState, std::set<T> finalStates);
+    FSM(std::set<T> states, std::set<A> alphabet, std::map<std::pair<T,A>, T> transitions, T initialState, std::set<T> finalStates);
     ~FSM();
     void add_state(T state, bool isfinalState);
-	void add_transition(T src, A input, T dest);
+    void add_transition(T src, A input, T dest);
     void add_symbolToAlphabet(A input);
     void saveFSM();
     std::string readFSM(const char *filename);
